@@ -60,7 +60,16 @@ This project consist of two APIs
       "username":"gurudayal",
       "password":"tlpl1234"
    }
+   
+   {
+    "user": {
+		"username": "gurudayal",
+		"password": "tlpl1234"
+    	   },
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZ3VydWRheWFsIiwicGFzc3dvcmQiOiJ0bHBsMTIzNCJ9LCJpYXQiOjE1MjAwMDc0NTN9.KEwj4r9oqWUC4guF5mvs5jEwlfVRjrOkikZsUV6gbu4"
+}
    ```
+   Use the generated token in the headers as token to use the above APIs
 ### Installattion
 
 Install dependicies
