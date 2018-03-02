@@ -2,6 +2,7 @@ const expect = require('expect');
 const request = require('supertest');
 const sizeOf = require('image-size');
 
+const {user} = require('./seed.js');
 const {app} = require('./../server.js');
 
 describe('POST /jsonpatch',()=>{
@@ -34,7 +35,7 @@ describe('POST /jsonpatch',()=>{
 
     request(app)
     .post('/secure-api/jsonpatch')
-    .set('token','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZ3VydWRheWFsIiwicGFzc3dvcmQiOiJ0bHBsMTIzNCJ9LCJpYXQiOjE1MTk3NTU5NTh9.cWEK0ZeBTcnvQFWR112EzeO9TtZ40oM_Seb8ZeGHK1I')
+    .set('token',user.token)
     .send(jsonTestObject)
     .expect('Content-Type', /json/)
     .expect(200)
@@ -61,7 +62,7 @@ describe('POST /thumbnail',()=>{
 
     request(app)
     .post('/secure-api/thumbnail')
-    .set('token','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZ3VydWRheWFsIiwicGFzc3dvcmQiOiJ0bHBsMTIzNCJ9LCJpYXQiOjE1MTk3NTU5NTh9.cWEK0ZeBTcnvQFWR112EzeO9TtZ40oM_Seb8ZeGHK1I')
+    .set('token',user.token)
     .send(jsonTestObject)
     .expect('Content-Type', /image/)
     .expect(200)
@@ -76,6 +77,6 @@ describe('POST /thumbnail',()=>{
       }
       done();
     });
-    
+
   });
 });

@@ -7,8 +7,9 @@ exports.login = (req,res)=>{
     username : req.body.username,
     password : req.body.password
   }
-  jwt.sign({user},'mysecretkey',function(err,token){
+  jwt.sign({user},'mysecretkey',(err,token)=>{
     res.json({
+      user:user,
       token:token
     })
   });
