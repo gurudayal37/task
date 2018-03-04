@@ -25,7 +25,7 @@ This project consist of two APIs
       ]
   }
   ```
-  - This api will return the resulting json object in responce.
+  - This api will return the resulting json in responce.
   ```json
   {
     "document": {
@@ -51,10 +51,10 @@ This project consist of two APIs
 	  "imageUrl":"https://homepages.cae.wisc.edu/~ece533/images/tulips.png"
   }
   ```
-  - This api will return the thumbnail of size 50x50 pixels object in responce.  
+  - This api will return the thumbnail of size 50x50 pixels in responce.  
   ![alt text](https://github.com/gurudayal37/task/blob/master/controllers/images/photo1.jpg)
   
- 3. The User needs to login for using these apis(http://localhost:3000/login)
+ 3. The User needs to authenticated for using the above APIs(http://localhost:3000/login)
    ```json
    {
       "username":"gurudayal",
@@ -69,7 +69,7 @@ This project consist of two APIs
     "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZ3VydWRheWFsIiwicGFzc3dvcmQiOiJ0bHBsMTIzNCJ9LCJpYXQiOjE1MjAwMDc0NTN9.KEwj4r9oqWUC4guF5mvs5jEwlfVRjrOkikZsUV6gbu4"
 }
    ```
-   Use the generated token in the headers as token to use the above APIs
+   Use the generated token in the header as token to use the above APIs
 ### Installattion
 
 Install dependicies
